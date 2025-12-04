@@ -9,3 +9,6 @@ FLIGHT_VALIDATION formula
 
 DELAY_VALIDATION formula
 =IF(X2="";"";IF(AND(X2=1;SUM(M2*1440;O2*1440;Q2*1440;S2*1440)>15);1;""))
+
+DAX for OTP formula
+OTP = (SUM(aims_flight[FLIGHT_VALIDATION]) - SUM(aims_flight[DELAY_VALIDATION])) / sum(aims_flight[FLIGHT_VALIDATION])
